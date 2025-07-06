@@ -10,11 +10,7 @@ PreferredSizeWidget? customAppBar() {
       children: [
         const Text(
           'News',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 22,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
         ),
         const Text(
           ' Cloud',

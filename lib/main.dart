@@ -13,7 +13,7 @@ class NewsApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'News App',
-      theme: ThemeData(fontFamily: 'Poppins', brightness: Brightness.light),
+      theme: ThemeData(fontFamily: 'Poppins', brightness: Brightness.dark),
       home: HomeView(),
     );
   }

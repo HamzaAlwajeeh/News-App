@@ -21,11 +21,7 @@ class NewsTile extends StatelessWidget {
           "Large Title Should be places in the place Large Title Should be places in the place",
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            color: Colors.black,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         SizedBox(height: 8),
         Text(
