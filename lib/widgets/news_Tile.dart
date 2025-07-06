@@ -12,25 +12,20 @@ class NewsTile extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(6),
-          child:
-              articleModel.image != null
-                  ? CachedNetworkImage(
-                    imageUrl: articleModel.image!,
-                    height: 200,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                    placeholder:
-                        (context, url) => const SizedBox(
-                          height: 200,
-                          child: Center(child: CircularProgressIndicator()),
-                        ),
-                    errorWidget:
-                        (context, url, error) => Image.asset(
-                          "assets/images/News.jpg",
-                          fit: BoxFit.cover,
-                        ),
-                  )
-                  : Image.asset("assets/images/News.jpg", fit: BoxFit.cover),
+          child: CachedNetworkImage(
+            imageUrl: articleModel.image!,
+            height: 200,
+            width: double.infinity,
+            fit: BoxFit.cover,
+            placeholder:
+                (context, url) => const SizedBox(
+                  height: 200,
+                  child: Center(child: CircularProgressIndicator()),
+                ),
+            errorWidget:
+                (context, url, error) =>
+                    Image.asset("assets/images/News.jpg", fit: BoxFit.cover),
+          ),
         ),
         SizedBox(height: 12),
         Text(
