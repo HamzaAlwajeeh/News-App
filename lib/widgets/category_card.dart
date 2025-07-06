@@ -7,7 +7,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Container(
         width: 160,
         height: 85,
@@ -16,6 +16,10 @@ class CategoryCard extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage(category.image),
             fit: BoxFit.fill,
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.4),
+              BlendMode.darken,
+            ),
           ),
         ),
         child: Center(

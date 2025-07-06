@@ -10,10 +10,7 @@ class CategoriesListView extends StatelessWidget {
       image: 'assets/images/technology.avif',
       categoryName: 'Technology',
     ),
-    CategoryModel(
-      image: 'assets/images/business.avif',
-      categoryName: 'Business',
-    ),
+    CategoryModel(image: 'assets/images/Be.jpg', categoryName: 'Business'),
     CategoryModel(image: 'assets/images/health.avif', categoryName: 'Health'),
     CategoryModel(image: 'assets/images/sports.avif', categoryName: 'Sports'),
     CategoryModel(
@@ -28,6 +25,7 @@ class CategoriesListView extends StatelessWidget {
     return SizedBox(
       height: 85,
       child: ListView.builder(
+        physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return CategoryCard(category: categories[index]);
