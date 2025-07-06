@@ -2,7 +2,7 @@ const kApiKey = '6faee75d5def4e109272ff3c8c02145b';
 const kGeneralNews =
     "https://newsapi.org/v2/everything?q=General&apiKey=$kApiKey#";
 const kSportsNews =
-    "https://newsapi.org/v2/everything?q=Sports&apiKey=$kApiKey#";
+    "https://newsapi.org/v2/everything?q=Football&apiKey=$kApiKey#";
 const kBusinessNews =
     "https://newsapi.org/v2/everything?q=Business&apiKey=$kApiKey#";
 const kHealthNews =

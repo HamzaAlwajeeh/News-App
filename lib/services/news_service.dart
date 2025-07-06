@@ -6,7 +6,7 @@ class NewsService {
   final Dio dio = Dio();
 
   Future<List<ArticleModel>> getNews() async {
-    var response = await dio.get(kGeneralNews);
+    var response = await dio.get(kSportsNews);
 
     Map<String, dynamic> jsonData = response.data;
 
