@@ -24,13 +24,13 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<List<ArticleModel>>(
+    return FutureBuilder<List<ArticleModel>?>(
       future: future,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           return NewsListView(articles: snapshot.data!);
         } else if (snapshot.hasError) {
-          return ErrorMessage(message: snapshot.error.toString());
+          return ErrorMessage(message: "There are an error, try again later");
         } else {
           return LoadingSign();
         }
