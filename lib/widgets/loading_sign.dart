@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LodingSign extends StatelessWidget {
-  const LodingSign({super.key});
+class LoadingSign extends StatelessWidget {
+  const LoadingSign({super.key});
 
   @override
   Widget build(BuildContext context) {

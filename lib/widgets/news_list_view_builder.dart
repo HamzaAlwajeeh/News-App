@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/constants/constants.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/services/news_service.dart';
 import 'package:news_app/widgets/error_message.dart';
@@ -13,26 +14,27 @@ class NewsListViewBuilder extends StatefulWidget {
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  List<ArticleModel> articles = [];
-  bool isLoding = true;
+  // ignore: prefer_typing_uninitialized_variables
+  var future;
   @override
   void initState() {
     super.initState();
-    getGeneralNews();
-  }
-
-  Future<void> getGeneralNews() async {
-    articles = await NewsService().getNews();
-    isLoding = false;
-    setState(() {});
+    future = NewsService().getNews(category: kGeneralNews);
   }
 
   @override
   Widget build(BuildContext context) {
-    return isLoding
-        ? LodingSign()
-        : articles.isNotEmpty
-        ? NewsListView(articles: articles)
-        : ErrorMessage();
+    return FutureBuilder<List<ArticleModel>>(
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return NewsListView(articles: snapshot.data!);
+        } else if (snapshot.hasError) {
+          return ErrorMessage();
+        } else {
+          return LoadingSign();
+        }
+      },
+    );
   }
 }
