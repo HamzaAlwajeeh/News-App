@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/constants/constants.dart';
 import 'package:news_app/widgets/Custom_app_bar.dart';
 import 'package:news_app/widgets/categories_list_view.dart';
 import 'package:news_app/widgets/news_list_view_builder.dart';
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
           slivers: [
             SliverToBoxAdapter(child: CategoriesListView()),
             SliverToBoxAdapter(child: SizedBox(height: 25)),
-            NewsListViewBuilder(),
+            NewsListViewBuilder(category: kGeneralNews),
           ],
         ),
       ),
