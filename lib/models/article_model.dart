@@ -9,6 +9,14 @@ class ArticleModel {
     required this.subTitle,
   });
 
+  factory ArticleModel.fromJson(json) {
+    return ArticleModel(
+      image: json['urlToImage'],
+      title: json['title'],
+      subTitle: json['description'],
+    );
+  }
+
   @override
   String toString() {
     return 'ArticleModel(title: $title, image: $image, subTitle: $subTitle)';

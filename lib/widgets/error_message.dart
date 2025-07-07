@@ -17,7 +17,7 @@ class ErrorMessage extends StatelessWidget {
               Image.asset('assets/images/error.png', width: 170),
               SizedBox(height: 20),
               Text(
-                message,
+                'There is an error , try again later',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ],
