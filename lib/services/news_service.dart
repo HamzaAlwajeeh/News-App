@@ -26,7 +26,7 @@ class NewsService {
       }
       return articlesList;
     } catch (e) {
-      return null;
+      throw Exception("There are an error, try again");
     }
   }
 }
