@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:news_app/generated/l10n.dart';
@@ -8,12 +9,15 @@ void main() {
 }
 
 class NewsApp extends StatelessWidget {
-  const NewsApp({super.key});
+  // ignore: use_super_parameters
+  const NewsApp({Key? key}) : super(key: key);
+
+  static const route = '/news-app';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: const Locale('en'),
+      locale: Locale('en'),
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
