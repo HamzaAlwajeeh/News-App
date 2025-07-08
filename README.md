@@ -58,9 +58,9 @@ The app organizes news by categories (General, Sports, Health, Technology, Scien
 
 ## 📦 Download APK
 
-You can download the latest APK from the [`release/`](release/) folder or from the [Releases page](https://github.com/USERNAME/REPO_NAME/releases) on GitHub.
+You can download the latest APK from the [`release/`](release/) folder or from the [Releases page](https://github.com/HamzaAlwajeeh/News-App/releases) on GitHub.
 
-[⬇️ Download APK](https://github.com/USERNAME/REPO_NAME/releases/download/v1.0.0/news_app-v1.0.0.apk)
+[⬇️ Download APK](https://github.com/HamzaAlwajeeh/News-App/releases/download/v1.0.0/app-release.apk)
 
 ## 📄 License
 
