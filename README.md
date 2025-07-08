@@ -34,6 +34,7 @@ The app organizes news by categories (General, Sports, Health, Technology, Scien
 - `lib/widgets/`: Reusable widgets
 - `assets/images/`: Category and error images
 - `assets/fonts/`: Custom fonts
+- `release/`: APK releases for download
 
 ## ⚙️ Android NDK Settings
 
@@ -54,6 +55,12 @@ The app organizes news by categories (General, Sports, Health, Technology, Scien
 - You must add your own NewsAPI key in `lib/services/news_service.dart`
 - The app uses dark mode by default
 - All images are stored in `assets/images/`
+
+## 📦 Download APK
+
+You can download the latest APK from the [`release/`](release/) folder or from the [Releases page](https://github.com/USERNAME/REPO_NAME/releases) on GitHub.
+
+[⬇️ Download APK](https://github.com/USERNAME/REPO_NAME/releases/download/v1.0.0/news_app-v1.0.0.apk)
 
 ## 📄 License
 
