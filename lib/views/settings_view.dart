@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/cubit/change_theme_cubit.dart';
+import 'package:news_app/cubit/cubit/change_language_cubit.dart';
 
 class SettingsView extends StatefulWidget {
   const SettingsView({super.key});
@@ -10,13 +13,14 @@ class SettingsView extends StatefulWidget {
 
 class _SettingsViewState extends State<SettingsView> {
   Brightness _themeMode = Brightness.dark;
-  Locale _locale = const Locale('en');
+  Locale _locale = Locale('en');
 
   void _changeTheme(Brightness? mode) {
     if (mode != null) {
       setState(() {
         _themeMode = mode;
       });
+      BlocProvider.of<ChangeThemeCubit>(context).changeTheme(theme: mode);
     }
   }
 
@@ -26,6 +30,9 @@ class _SettingsViewState extends State<SettingsView> {
         _locale = locale;
       });
     }
+    BlocProvider.of<ChangeLanguageCubit>(
+      context,
+    ).changeLanguage(language: locale!);
   }
 
   @override
